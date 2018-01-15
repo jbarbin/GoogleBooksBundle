@@ -1,0 +1,3 @@
+services:
+    jbarbin_googlebooks_api:
+        class: JBarbin\GoogleBooksBundle\GoogleAPI\GoogleAPI
