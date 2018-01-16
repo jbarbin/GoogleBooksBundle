@@ -53,7 +53,7 @@ Step 3: Configure your Google API Key
 First at all, you need to create an api key on google developer console on https://console.developers.google.com. You have to activate Google Books API on your project and create an api key.  
 
 ```yaml
-# app/config.yml
+# app/services.yml
 
 
 parameters:
@@ -62,3 +62,31 @@ parameters:
 
 ```
 
+Usage
+=====
+
+Search books by title or/and author
+--------------------------------
+
+
+```php
+// Use statement
+use JBarbin\GoogleBooksBundle\GoogleAPI\Query;
+
+// ...
+
+$googleAPI = $this->get('jbarbin_googlebooks_api');
+$api_key = $this->container->getParameter('jbarbin_googlebooks.google_api_key');
+$query = new Query($api_key);
+
+// Search by title
+$query->setTitle('book title');
+
+// Search by author
+$query->setTitle('book author');
+
+// Get results
+$books = $googleAPI->searchBook($query);
+
+
+```
