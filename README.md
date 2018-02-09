@@ -58,7 +58,7 @@ First at all, you need to create an api key on google developer console on https
 
 parameters:
     // ...
-    jbarbin_googlebooks.google_api_key: AIzaSyB4TlkEGbK6oMyCDCcFTsUs_BtCVhIS4oU
+    jbarbin_googlebooks.google_api_key: ???????????????????????????
 
 ```
 
